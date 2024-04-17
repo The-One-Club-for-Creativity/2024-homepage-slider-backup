@@ -32,7 +32,7 @@
     height: 100%;
     max-height: 540px;
 
-    /* Fade images in when they become center image - Could be removed */
+    /* Fade images in - Could be removed */
     transition: 0.5s;
     opacity: 75%;
   }
@@ -170,14 +170,16 @@
   <div class="slider">
     <!-- PANE -->
     <div class="paneContainer">
-      <a class="paneContainerLink" href="https://ascenders.tdc.org/">
+      <a class="paneContainerLink" href="https://www.oneclub.org/store/?c=42">
         <img
-          id="ascenders-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/2024-Ascenders-1350x540.jpg"
+          id="adc-pane"
+          data-lazy="/images/userfiles/images/home/homeSlider2024/2024-ADC-1350x540.jpg"
         />
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">FINAL DEADLINE APRIL 19</h3>
-          <a class="videoLink" href="https://ascenders.tdc.org/">ENTER NOW</a>
+          <h3 class="videoLinkText">ADC 103rd AWARDS // WEDNESDAY MAY 15</h3>
+          <a class="videoLink" href="https://www.oneclub.org/store/?c=42"
+            >GET TICKETS</a
+          >
         </div>
       </a>
     </div>
@@ -200,15 +202,30 @@
     </div>
     <!-- PANE -->
     <div class="paneContainer">
-      <a class="paneContainerLink" href="https://www.oneclub.org/store/?c=37">
+      <a class="paneContainerLink" href="https://ascenders.tdc.org/">
         <img
-          id="one-show-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/2024-OS-1350x540.jpg"
+          id="ascenders-pane"
+          data-lazy="/images/userfiles/images/home/homeSlider2024/2024-Ascenders-1350x540.jpg"
         />
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">THE ONE SHOW // FRIDAY MAY 17</h3>
-          <a class="videoLink" href="https://www.oneclub.org/store/?c=37"
-            >GET TICKETS</a
+          <h3 class="videoLinkText">FINAL DEADLINE APRIL 19</h3>
+          <a class="videoLink" href="https://ascenders.tdc.org/">ENTER NOW</a>
+        </div>
+      </a>
+    </div>
+    <!-- PANE -->
+    <div class="paneContainer">
+      <a class="paneContainerLink" href="https://oneshow.org/finalist-request">
+        <img
+          id="one-show-pane"
+          data-lazy="/images/userfiles/images/home/homeSlider2024/2024OneShow-OCBanner411-Finalists-1350x540.jpg"
+        />
+        <div class="videoLinkContainer">
+          <h3 class="videoLinkText">
+            THE ONE SHOW FINALISTS HAVE BEEN ANNOUNCED
+          </h3>
+          <a class="videoLink" href="https://oneshow.org/finalist-request"
+            >VIEW FINALISTS</a
           >
         </div>
       </a>
@@ -232,32 +249,17 @@
         </div>
       </a>
     </div>
-    <!-- PANE -->
-    <div class="paneContainer">
-      <a class="paneContainerLink" href="https://www.oneclub.org/store/?c=37">
-        <img
-          id="adc-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/2024-ADC-1350x540.jpg"
-        />
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">ADC 103rd AWARDS // WEDNESDAY MAY 15</h3>
-          <a class="videoLink" href="https://www.oneclub.org/store/?c=37"
-            >GET TICKETS</a
-          >
-        </div>
-      </a>
-    </div>
   </div>
 </div>
 
-<script
+<!--<script
   type="text/javascript"
   src="//code.jquery.com/jquery-1.11.0.min.js"
 ></script>
 <script
   type="text/javascript"
   src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-></script>
+></script>-->
 <script type="text/javascript" src="/scripts/css/slick/slick.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
@@ -282,14 +284,13 @@
       $(".slider").slick("slickNext");
     }, 1);
 
-    // Fade in animation that hides a seemingly unavoidable glitchy slide in on page load
     setTimeout(function () {
       $(".paneContainer").animate(
         {
           opacity: 1,
         },
         1000
-      );
+      ); // Fades to opacity 1 over 1000 milliseconds (1 second)
     }, 1000); // Waits 1 second before starting the animation
 
     // Dynamically control the left position of the Link Container so it's always in the bottom left corner
