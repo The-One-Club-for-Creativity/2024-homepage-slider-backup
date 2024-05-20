@@ -1,171 +1,172 @@
 <link rel="stylesheet" type="text/css" href="/scripts/css/slick/slick.css" />
 <link
-  rel="stylesheet"
-  type="text/css"
-  href="/scripts/css/slick/slick-theme.css"
+	rel="stylesheet"
+	type="text/css"
+	href="/scripts/css/slick/slick-theme.css"
 />
 <style>
-  /* General Styling */
-  .sliderContainer {
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    max-height: 540px;
-    max-width: 1351.69px;
-  }
+	/* General Styling */
+	.sliderContainer {
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		max-height: 540px;
+		max-width: 1351.69px;
+	}
 
-  .paneContainer {
-    height: 100%;
-    position: relative;
+	.paneContainer {
+		height: 100%;
+		position: relative;
 
-    /* Gap between slides */
-    padding: 0 5px 0 5px;
-  }
+		/* Gap between slides */
+		padding: 0 5px 0 5px;
+	}
 
-  .paneContainerLink {
-    cursor: pointer;
-  }
+	.paneContainerLink {
+		cursor: pointer;
+	}
 
-  .slick-slide video,
-  .slick-slide img {
-    height: 100%;
-    max-height: 540px;
+	.slick-slide video,
+	.slick-slide img {
+		height: 100%;
+		max-height: 540px;
 
-    /* Fade images in - Could be removed */
-    transition: 0.5s;
-    opacity: 75%;
-  }
+		/* Fade images in - Could be removed */
+		transition: 0.5s;
+		opacity: 75%;
+	}
 
-  .slick-center video,
-  .slick-center img {
-    height: 100%;
-    opacity: 100%;
-  }
+	.slick-center video,
+	.slick-center img {
+		height: 100%;
+		opacity: 100%;
+	}
 
-  /* --------- BOTTOM LINK ---------  */
+	/* --------- BOTTOM LINK ---------  */
 
-  .videoLinkContainer {
-    position: absolute;
-    bottom: 20px;
-    text-align: left;
+	.videoLinkContainer {
+		position: absolute;
+		bottom: 20px;
+		text-align: left;
 
-    /* Main positioning of link button */
-    /* left: 20%; */
+		/* Main positioning of link button */
+		/* left: 20%; */
 
-    /* To hide the buttons until they aren't centered */
-    opacity: 0%;
-    transition: 0.5s;
-  }
+		/* To hide the buttons until they aren't centered */
+		opacity: 0%;
+		transition: 0.5s;
+	}
 
-  /* Show links when on center slide */
-  .slick-center .videoLinkContainer {
-    opacity: 100%;
-  }
+	/* Show links when on center slide */
+	.slick-center .videoLinkContainer {
+		opacity: 100%;
+	}
 
-  .videoLink {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14pt;
-    letter-spacing: 0px;
-    color: black;
-    background-color: white;
-    border: 1px solid black;
-    padding: 7.5px 15px 6.5px;
+	.videoLink {
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 14pt;
+		letter-spacing: 0px;
+		color: black;
+		background-color: white;
+		border: 1px solid black;
+		padding: 7.5px 15px 6.5px;
 
-    transition: 0.5s;
-  }
+		transition: 0.5s;
+	}
 
-  .videoLink:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-  }
+	.videoLink:hover {
+		background-color: black;
+		color: white;
+		border: 1px solid white;
+	}
 
-  .videoLinkText {
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    font-weight: bold;
-    font-size: 20pt;
-  }
+	.videoLinkText {
+		color: white;
+		text-shadow: 2px 2px 4px black;
+		font-weight: bold;
+		font-size: 20pt;
+	}
 
-  /* ------- ARROW BUTTONS -------- */
-  .slick-prev {
-    left: 15px;
-    margin-left: 5px;
-  }
-  .slick-next {
-    right: 15px;
-    margin-right: 5px;
-  }
+	/* ------- ARROW BUTTONS -------- */
+	.slick-prev {
+		left: 15px;
+		margin-left: 5px;
+	}
+	.slick-next {
+		right: 15px;
+		margin-right: 5px;
+	}
 
-  .slick-prev,
-  .slick-next {
-    z-index: 1;
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-  }
+	.slick-prev,
+	.slick-next {
+		z-index: 1;
+		width: 35px;
+		height: 35px;
+		border-radius: 100%;
+	}
 
-  .slick-prev:before,
-  .slick-next:before {
-    font-size: 40px;
-    color: rgb(255, 255, 255);
-    opacity: 75%;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    transition: 0.5s;
-  }
+	.slick-prev:before,
+	.slick-next:before {
+		font-size: 40px;
+		color: rgb(255, 255, 255);
+		opacity: 75%;
+		text-shadow: 2px 2px 4px rgb(0, 0, 0);
+		transition: 0.5s;
+	}
 
-  .slick-next:focus,
-  .slick-prev:focus {
-    opacity: 75%;
-    transition: 0.5s;
-  }
+	.slick-next:focus,
+	.slick-prev:focus {
+		opacity: 75%;
+		transition: 0.5s;
+	}
 
-  .slick-prev:hover,
-  .slick-next:hover {
-    opacity: 1;
-    transition: 0.5s;
-  }
+	.slick-prev:hover,
+	.slick-next:hover {
+		opacity: 1;
+		transition: 0.5s;
+	}
 
-  /* Graceful Loading */
+	/* Graceful Loading */
 
-  .paneContainer {
-    opacity: 0;
-  }
+	.paneContainer {
+		opacity: 0;
+	}
 
-  /* ----- MEDIA QUERIES ----- */
+	/* ----- MEDIA QUERIES ----- */
 
-  /* After left menu disappears */
-  @media screen and (max-width: 991px) {
-    video,
-    img {
-      width: 95vw;
-    }
-    .videoLinkText {
-      font-size: 16pt;
-    }
-    .slider {
-      margin-bottom: 20px;
-    }
-  }
+	/* After left menu disappears */
+	@media screen and (max-width: 991px) {
+		video,
+		img {
+			width: 95vw;
+		}
+		.videoLinkText {
+			font-size: 16pt;
+		}
+		.slider {
+			margin-bottom: 20px;
+		}
+	}
 
-  /* Phones and tiny browsers */
-  @media screen and (max-width: 600px) {
-    .videoLinkText {
-      font-size: 12pt;
-    }
-    .videoLink {
-      font-size: 10pt;
-    }
-    .slick-prev:before,
-    .slick-next:before {
-      opacity: 0;
-    }
-  }
+	/* Phones and tiny browsers */
+	@media screen and (max-width: 600px) {
+		.videoLinkText {
+			font-size: 12pt;
+		}
+		.videoLink {
+			font-size: 10pt;
+		}
+		.slick-prev:before,
+		.slick-next:before {
+			opacity: 0;
+		}
+	}
 </style>
 
 <div class="sliderContainer">
+<<<<<<< HEAD
   <!-- CONTAINER -->
   <div class="slider">
     <!-- PANE -->
@@ -236,6 +237,78 @@
       </a>
     </div>
   </div>
+=======
+	<!-- CONTAINER -->
+	<div class="slider">
+		<!-- PANE -->
+		<div class="paneContainer">
+			<a class="paneContainerLink" href="https://2024.creativeweek.com/#ADC103">
+				<img
+					id="adc-pane"
+					data-lazy="/images/userfiles/images/home/homeSlider2024/2024-ADC-1350x540.jpg"
+				/>
+				<div class="videoLinkContainer">
+					<h3 class="videoLinkText">ADC 103 Recap</h3>
+					<a class="videoLink" href="https://2024.creativeweek.com/#ADC103"
+						>SEE RECAP</a
+					>
+				</div>
+			</a>
+		</div>
+		<!-- PANE -->
+		<div class="paneContainer">
+			<a class="paneContainerLink" href="https://www.creativeweek.com/">
+				<video autoplay muted loop id="creative-week-v2-pane">
+					<source
+						src="/images/userfiles/images/home/homeSlider2024/2024_CW_V2-1920x350-1350x540.mp4"
+						type="video/mp4"
+					/>
+				</video>
+				<div class="videoLinkContainer">
+					<h3 class="videoLinkText">Creative Week // May 13 - 17</h3>
+					<a class="videoLink" href="https://www.creativeweek.com/"
+						>LEARN MORE</a
+					>
+				</div>
+			</a>
+		</div>
+		<!-- PANE -->
+		<div class="paneContainer">
+			<a class="paneContainerLink" href="https://www.creativeweek.com/">
+				<img
+					id="one-show-pane"
+					data-lazy="/images/userfiles/images/home/homeSlider2024/2024-OS-1350x540.jpg"
+				/>
+				<div class="videoLinkContainer">
+					<h3 class="videoLinkText">ONE SHOW 2024 // FRIDAY MAY 17</h3>
+					<a class="videoLink" href="https://www.creativeweek.com/"
+						>GET TICKETS</a
+					>
+				</div>
+			</a>
+		</div>
+		<!-- PANE -->
+		<div class="paneContainer">
+			<a
+				class="paneContainerLink"
+				href="https://2024.creativeweek.com/#youngones"
+			>
+				<video autoplay muted loop id="young-ones-pane">
+					<source
+						src="/images/userfiles/images/home/homeSlider2024/2024-YO-1350x540.mp4"
+						type="video/mp4"
+					/>
+				</video>
+				<div class="videoLinkContainer">
+					<h3 class="videoLinkText">YOUNG ONES 2024 RECAP</h3>
+					<a class="videoLink" href="https://2024.creativeweek.com/#youngones"
+						>SEE RECAP</a
+					>
+				</div>
+			</a>
+		</div>
+	</div>
+>>>>>>> 702c3e17402480ed98123bab8e9a3fb3fd3bd22e
 </div>
 
 <!--<script
@@ -248,47 +321,47 @@
 ></script>-->
 <script type="text/javascript" src="/scripts/css/slick/slick.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function () {
-    $(".slider").slick({
-      centerMode: true,
-      centerPadding: "80px",
-      autoplay: true,
-      autoplaySpeed: 4000,
-      speed: 500,
-      arrows: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      mobileFirst: true,
-      adaptiveHeight: false,
-      variableWidth: true,
-      lazyLoad: "progressive",
-    });
+	$(document).ready(function () {
+		$(".slider").slick({
+			centerMode: true,
+			centerPadding: "80px",
+			autoplay: true,
+			autoplaySpeed: 4000,
+			speed: 500,
+			arrows: true,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			mobileFirst: true,
+			adaptiveHeight: false,
+			variableWidth: true,
+			lazyLoad: "progressive",
+		});
 
-    // Go to the next slide after 0.5 seconds
-    setTimeout(function () {
-      $(".slider").slick("slickNext");
-    }, 1);
+		// Go to the next slide after 0.5 seconds
+		setTimeout(function () {
+			$(".slider").slick("slickNext");
+		}, 1);
 
-    setTimeout(function () {
-      $(".paneContainer").animate(
-        {
-          opacity: 1,
-        },
-        1000
-      ); // Fades to opacity 1 over 1000 milliseconds (1 second)
-    }, 1000); // Waits 1 second before starting the animation
+		setTimeout(function () {
+			$(".paneContainer").animate(
+				{
+					opacity: 1,
+				},
+				1000
+			); // Fades to opacity 1 over 1000 milliseconds (1 second)
+		}, 1000); // Waits 1 second before starting the animation
 
-    // Dynamically control the left position of the Link Container so it's always in the bottom left corner
-    function updateLinkContainerPosition() {
-      var paneContainerHalfWidth = $(".paneContainer").first().outerWidth() / 2;
-      var slickListHalfWidth = $(".slick-list").outerWidth() / 2;
-      var leftValue = paneContainerHalfWidth - slickListHalfWidth + 20;
-      $(".videoLinkContainer").css("left", leftValue + "px");
-    }
+		// Dynamically control the left position of the Link Container so it's always in the bottom left corner
+		function updateLinkContainerPosition() {
+			var paneContainerHalfWidth = $(".paneContainer").first().outerWidth() / 2;
+			var slickListHalfWidth = $(".slick-list").outerWidth() / 2;
+			var leftValue = paneContainerHalfWidth - slickListHalfWidth + 20;
+			$(".videoLinkContainer").css("left", leftValue + "px");
+		}
 
-    updateLinkContainerPosition();
-    $(window).resize(updateLinkContainerPosition);
-    $(".slider").on("setPosition", updateLinkContainerPosition);
-  });
+		updateLinkContainerPosition();
+		$(window).resize(updateLinkContainerPosition);
+		$(".slider").on("setPosition", updateLinkContainerPosition);
+	});
 </script>
