@@ -372,3 +372,33 @@
     $(".slider").on("setPosition", updateLinkContainerPosition);
   });
 </script>
+<script type="text/javascript">
+  // Preload images
+  const imagePaths = [
+    "/images/userfiles/images/home/homeSlider2024/2025-CBC-Social_Banners-1350x540A.png",
+    "/images/userfiles/images/home/ADC_Ceremony.jpg",
+    "/images/userfiles/images/home/homeSlider2024/2025-NCL-1350x540.jpg",
+    "/images/userfiles/images/home/homeSlider2024/2025-YoungOnes-1350x540.jpg",
+  ];
+
+  imagePaths.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  // Preload videos
+  const videoPaths = [
+    "/images/userfiles/images/home/homeSlider2024/2025OneShow-Finalists-411-1350x540.mp4",
+    "/images/userfiles/images/home/homeSlider2024/2025-CW-1350x540_1A.mp4",
+    "/images/userfiles/images/home/homeSlider2024/TDC71_OneClub_HomePage_1350x540_Loop.mp4",
+  ];
+
+  videoPaths.forEach((src) => {
+    const video = document.createElement("video");
+    video.preload = "auto";
+    video.src = src;
+    // Optional: Uncomment to ensure full caching
+    // video.style.display = "none";
+    // document.body.appendChild(video);
+  });
+</script>
