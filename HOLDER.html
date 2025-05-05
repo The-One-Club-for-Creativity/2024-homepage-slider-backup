@@ -213,6 +213,29 @@
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
+      <a
+        class="paneContainerLink"
+        href="https://tdc.org/winner-archive/?work-year=2025"
+      >
+        <video autoplay muted loop playsinline id="tdc71-winners">
+          <source
+            src="/images/userfiles/images/home/homeSlider2024/TDC71_WinnersAnnouncement_1530x540.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="videoLinkContainer">
+          <h3 class="videoLinkText">TDC71 Winners HAVE BEEN ANNOUNCED</h3>
+          <a
+            class="videoLink"
+            href="https://tdc.org/winner-archive/?work-year=2025"
+            >VIEW Winners</a
+          >
+        </div>
+      </a>
+    </div>
+
+    <!-- VIDEO PANE -->
+    <div class="paneContainer">
       <a class="paneContainerLink" href="https://oneshow.org/finalist-request/">
         <video autoplay muted loop playsinline id="ones-show-finalists">
           <source
@@ -304,24 +327,6 @@
       </a>
     </div>
 
-    <!-- VIDEO PANE -->
-    <div class="paneContainer">
-      <a class="paneContainerLink" href="https://creativeweek.com/tdc-71/">
-        <video autoplay muted loop playsinline id="enter-tdc-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/TDC71_OneClub_HomePage_1350x540_Loop.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">TDC71 Exhibition – Tuesday, May 13</h3>
-          <a class="videoLink" href="https://creativeweek.com/tdc-71/"
-            >GET TICKETS</a
-          >
-        </div>
-      </a>
-    </div>
-
     <!-- END -->
   </div>
 </div>
@@ -370,5 +375,35 @@
     updateLinkContainerPosition();
     $(window).resize(updateLinkContainerPosition);
     $(".slider").on("setPosition", updateLinkContainerPosition);
+  });
+</script>
+<script type="text/javascript">
+  // Preload images
+  const imagePaths = [
+    "/images/userfiles/images/home/homeSlider2024/2025-CBC-Social_Banners-1350x540A.png",
+    "/images/userfiles/images/home/ADC_Ceremony.jpg",
+    "/images/userfiles/images/home/homeSlider2024/2025-NCL-1350x540.jpg",
+    "/images/userfiles/images/home/homeSlider2024/2025-YoungOnes-1350x540.jpg",
+  ];
+
+  imagePaths.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  // Preload videos
+  const videoPaths = [
+    "/images/userfiles/images/home/homeSlider2024/2025OneShow-Finalists-411-1350x540.mp4",
+    "/images/userfiles/images/home/homeSlider2024/2025-CW-1350x540_1A.mp4",
+    "/images/userfiles/images/home/homeSlider2024/TDC71_OneClub_HomePage_1350x540_Loop.mp4",
+  ];
+
+  videoPaths.forEach((src) => {
+    const video = document.createElement("video");
+    video.preload = "auto";
+    video.src = src;
+    // Optional: Uncomment to ensure full caching
+    // video.style.display = "none";
+    // document.body.appendChild(video);
   });
 </script>
