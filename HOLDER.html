@@ -168,21 +168,23 @@
 </style>
 
 <div class="sliderContainer">
-  <!-- CONTAINER -->
   <div class="slider">
-    <!-- VIDEO PANE -->
+    <!-- IMAGE PANE -->
     <div class="paneContainer">
-      <a class="paneContainerLink" href="https://onecreatorlab.org/apply/">
-        <video autoplay muted loop playsinline id="ocl-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/OCL_generic_411_1350x540.mp4"
-            type="video/mp4"
-          />
-        </video>
+      <a
+        class="paneContainerLink"
+        href="https://www.oneclub.org/awards/rankings/-archive/agency/2025/all/all/all/all"
+      >
+        <img
+          id="global-rankings-pane"
+          data-lazy="/images/userfiles/images/home/homeSlider2024/GCR-411-1350x540.jpg"
+        />
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">OCL Spring 2026 Applications are open</h3>
-          <a class="videoLink" href="https://onecreatorlab.org/apply/"
-            >APPLY NOW</a
+          <h3 class="videoLinkText">2025 Global Rankings Announced</h3>
+          <a
+            class="videoLink"
+            href="https://www.oneclub.org/awards/rankings/-archive/agency/2025/all/all/all/all"
+            >VIEW RANKINGS</a
           >
         </div>
       </a>
@@ -206,13 +208,15 @@
       </a>
     </div>
 
-    <!-- IMAGE PANE -->
+    <!-- VIDEO PANE -->
     <div class="paneContainer">
       <a class="paneContainerLink" href="https://adcawards.org/">
-        <img
-          id="adc-pane"
-          data-lazy="/images/userfiles/images/promo/ADC105BannerforWeb.jpg"
-        />
+        <video autoplay muted loop playsinline id="adc-pane">
+          <source
+            src="/images/userfiles/images/home/homeSlider2024/ADC_411_2026.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div class="videoLinkContainer">
           <h3 class="videoLinkText">
             ADC AWARDS — Regular Deadline: January 23
@@ -261,47 +265,12 @@
       <a class="paneContainerLink" href="https://creativeleadersretreat.com/">
         <img
           id="clr-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/CLR-2026-411-1350X540-V02-3.jpg"
+          data-lazy="/images/userfiles/images/home/homeSlider2024/CLR-2026-411-1350X540-Jan05-1.jpg"
         />
         <div class="videoLinkContainer">
           <h3 class="videoLinkText">Discounted Room Rates Until January 29</h3>
           <a class="videoLink" href="https://creativeleadersretreat.com/"
             >GET TICKETS</a
-          >
-        </div>
-      </a>
-    </div>
-
-    <!-- IMAGE PANE -->
-    <div class="paneContainer">
-      <a
-        class="paneContainerLink"
-        href="https://www.oneclub.org/oneasia/showcase/"
-      >
-        <img
-          id="clr-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/oneasia2025-winners-411.png"
-        />
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">ONE ASIA WINNERS ANNOUNCED</h3>
-          <a class="videoLink" href="https://www.oneclub.org/oneasia/showcase/"
-            >VIEW WINNERS</a
-          >
-        </div>
-      </a>
-    </div>
-
-    <!-- IMAGE PANE -->
-    <div class="paneContainer">
-      <a class="paneContainerLink" href="https://adcolor.org/awards/">
-        <img
-          id="adcolor-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/2025-TOCC_AdColor_Award-1350x540.jpg"
-        />
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">ADCOLOR 2025 Winners Announced</h3>
-          <a class="videoLink" href="https://adcolor.org/awards/"
-            >VIEW WINNERS</a
           >
         </div>
       </a>
@@ -360,10 +329,9 @@
 <script type="text/javascript">
   // Preload images
   const imagePaths = [
-    "/images/userfiles/images/home/homeSlider2024/oneasia2025-winners-411.png",
+    "/images/userfiles/images/home/homeSlider2024/GCR-411-1350x540.jpg",
     "/images/userfiles/images/promo/CLR2026411.png",
     "/images/userfiles/images/promo/ADC105BannerforWeb.jpg",
-    "/images/userfiles/images/home/homeSlider2024/2025-TOCC_AdColor_Award-1350x540.jpg",
   ];
 
   imagePaths.forEach((src) => {
@@ -374,9 +342,11 @@
   // Preload videos
   const videoPaths = [
     "/images/userfiles/images/home/homeSlider2024/2026OneShow_Regular-Deadline_TOC411-1350x540_1.mp4",
+    "/images/userfiles/images/home/homeSlider2024/ADC_411_2026.mp4",
     "/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio.mp4",
     "/images/userfiles/images/home/homeSlider2024/OCL_generic_411_1350x540.mp4",
     "/images/userfiles/images/home/homeSlider2024/TDC72_One%20Club%20Homepage%20banner%20no%20date.mp4",
+    "/images/userfiles/images/home/homeSlider2024/CLR-2026-411-1350X540-Jan05-1.jpg",
   ];
 
   videoPaths.forEach((src) => {
