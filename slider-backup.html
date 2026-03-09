@@ -170,7 +170,7 @@
 <div class="sliderContainer">
   <div class="slider">
     <!-- IMAGE PANE -->
-    <div class="paneContainer">
+    <!--  <div class="paneContainer">
       <a
         class="paneContainerLink"
         href="https://www.oneclub.org/awards/rankings/-archive/agency/2025/all/all/all/all"
@@ -188,28 +188,44 @@
           >
         </div>
       </a>
-    </div>
+    </div>-->
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
-      <a class="paneContainerLink" href="https://oneshow.org/">
-        <video autoplay muted loop playsinline id="one-show-pane">
+      <a class="paneContainerLink" href="https://creativeweek.com/">
+        <video autoplay muted loop playsinline id="cw-pane">
           <source
-            src="/images/userfiles/images/home/homeSlider2024/2026OneShow_Regular-Deadline_TOC411-1350x540%20(1).mp4"
+            src="/images/userfiles/images/home/homeSlider2024/2026-CW-1350x540.mp4"
             type="video/mp4"
           />
         </video>
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">
-            The One Show 2026 Final Deadline: February 20
-          </h3>
-          <a class="videoLink" href="https://oneshow.org/">ENTER NOW</a>
+          <!-- <h3 class="videoLinkText">
+            CREATIVE WEEK IS COMING
+          </h3> -->
+          <a class="videoLink" href="https://creativeweek.com/">MORE INFO</a>
+        </div>
+      </a>
+    </div>
+
+    <!-- IMAGE PANE -->
+    <div class="paneContainer">
+      <a class="paneContainerLink" href="https://conference.tdc.org/">
+        <img
+          id="type-drives-commerce-conference-pane"
+          data-lazy="/images/userfiles/images/home/homeSlider2024/TDC%20conference%20OC%20banner.jpg"
+        />
+        <div class="videoLinkContainer">
+          <h3 class="videoLinkText">TYPE DRIVES COMMERCE CONFERENCE</h3>
+          <a class="videoLink" href="https://conference.tdc.org/"
+            >GET TICKETS</a
+          >
         </div>
       </a>
     </div>
 
     <!-- VIDEO PANE -->
-    <div class="paneContainer">
+    <!--    <div class="paneContainer">
       <a class="paneContainerLink" href="https://adcawards.org/">
         <video autoplay muted loop playsinline id="adc-pane">
           <source
@@ -218,13 +234,11 @@
           />
         </video>
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">
-            ADC AWARDS — Final Deadline: February 20
-          </h3>
+          <h3 class="videoLinkText">ADC AWARDS — ENTRIES ARE OPEN</h3>
           <a class="videoLink" href="https://adcawards.org/">ENTER NOW</a>
         </div>
       </a>
-    </div>
+    </div>-->
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
@@ -237,41 +251,9 @@
         </video>
         <div class="videoLinkContainer">
           <h3 class="videoLinkText">
-            Young Ones Student Awards – Regular Deadline: February 27
+            Young Ones Student Awards - Open Thru March 18
           </h3>
           <a class="videoLink" href="https://youngones.org/">ENTER NOW</a>
-        </div>
-      </a>
-    </div>
-
-    <!-- VIDEO PANE -->
-    <div class="paneContainer">
-      <a class="paneContainerLink" href="https://enter.tdc.org/">
-        <video autoplay muted loop playsinline id="tdc-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/TDC72_One%20Club%20Homepage%20banner%20no%20date.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">TDC72 – {include deadline_TDC_current}</h3>
-          <a class="videoLink" href="https://enter.tdc.org/">ENTER NOW</a>
-        </div>
-      </a>
-    </div>
-
-    <!-- IMAGE PANE -->
-    <div class="paneContainer">
-      <a class="paneContainerLink" href="https://creativeleadersretreat.com/">
-        <img
-          id="clr-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/CLR-2026-411-1350X540-Jan05-1.jpg"
-        />
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">Creative Leaders Retreat: Feb 19 - 21</h3>
-          <a class="videoLink" href="https://creativeleadersretreat.com/"
-            >GET TICKETS</a
-          >
         </div>
       </a>
     </div>
@@ -309,7 +291,7 @@
         {
           opacity: 1,
         },
-        1000
+        1000,
       ); // Fades to opacity 1 over 1000 milliseconds (1 second)
     }, 1000); // Waits 1 second before starting the animation
 
@@ -329,9 +311,7 @@
 <script type="text/javascript">
   // Preload images
   const imagePaths = [
-    "/images/userfiles/images/home/homeSlider2024/GCR-411-1350x540.jpg",
-    "/images/userfiles/images/promo/CLR2026411.png",
-    "/images/userfiles/images/promo/ADC105BannerforWeb.jpg",
+    "/images/userfiles/images/home/homeSlider2024/TDC%20conference%20OC%20banner.jpg",
   ];
 
   imagePaths.forEach((src) => {
@@ -341,12 +321,8 @@
 
   // Preload videos
   const videoPaths = [
-    "/images/userfiles/images/home/homeSlider2024/2026OneShow_Regular-Deadline_TOC411-1350x540_1.mp4",
-    "/images/userfiles/images/home/homeSlider2024/ADC_411_2026.mp4",
+    "/images/userfiles/images/home/homeSlider2024/2026-CW-1350x540.mp4",
     "/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio.mp4",
-    "/images/userfiles/images/home/homeSlider2024/OCL_generic_411_1350x540.mp4",
-    "/images/userfiles/images/home/homeSlider2024/TDC72_One%20Club%20Homepage%20banner%20no%20date.mp4",
-    "/images/userfiles/images/home/homeSlider2024/CLR-2026-411-1350X540-Jan05-1.jpg",
   ];
 
   videoPaths.forEach((src) => {
