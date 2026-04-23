@@ -192,7 +192,10 @@
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
-      <a class="paneContainerLink" href="https://youngones.org/">
+      <a
+        class="paneContainerLink"
+        href="https://creativeweek.com/tickets/#young-ones-tickets"
+      >
         <video autoplay muted loop playsinline id="young-ones-pane">
           <source
             src="/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio.mp4"
@@ -200,10 +203,12 @@
           />
         </video>
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">
-            Young Ones Student Awards - Open Thru March 18
-          </h3>
-          <a class="videoLink" href="https://youngones.org/">ENTER NOW</a>
+          <h3 class="videoLinkText">YOUNG ONES CEREMONY – May 11</h3>
+          <a
+            class="videoLink"
+            href="https://creativeweek.com/tickets/#young-ones-tickets"
+            >GET TICKETS</a
+          >
         </div>
       </a>
     </div>
@@ -221,28 +226,28 @@
           <!-- <h3 class="videoLinkText">
             CREATIVE WEEK IS COMING
           </h3> -->
-          <a class="videoLink" href="https://creativeweek.com/">MORE INFO</a>
+          <a class="videoLink" href="https://creativeweek.com/">GET TICKETS</a>
         </div>
       </a>
     </div>
 
-    <!-- IMAGE PANE -->
-    <!--
-	<div class="paneContainer">
-      <a class="paneContainerLink" href="https://conference.tdc.org/">
-        <img
-          id="type-drives-commerce-conference-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/TDC%20conference%20OC%20banner.jpg"
-        />
+    <!-- VIDEO PANE -->
+    <div class="paneContainer">
+      <a class="paneContainerLink" href="https://onecreatorlab.org/apply/">
+        <video autoplay muted loop playsinline id="ocl-pane">
+          <source
+            src="/images/userfiles/images/home/homeSlider2024/OCL_generic_411_1350x540.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">TYPE DRIVES COMMERCE CONFERENCE</h3>
-          <a class="videoLink" href="https://conference.tdc.org/"
-            >GET TICKETS</a
+          <h3 class="videoLinkText">FALL 2026 APPLICATIONS ARE NOW OPEN</h3>
+          <a class="videoLink" href="https://onecreatorlab.org/apply/"
+            >APPLY NOW</a
           >
         </div>
       </a>
-    </div> 
--->
+    </div>
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
@@ -257,11 +262,9 @@
           />
         </video>
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">THE ONE SHOW – May 15</h3>
-          <a
-            class="videoLink"
-            href="https://creativeweek.com/tickets/#the-one-show-tickets"
-            >GET TICKETS</a
+          <h3 class="videoLinkText">Finalists Announced</h3>
+          <a class="videoLink" href="https://oneshow.org/finalists/"
+            >SEE THE LIST</a
           >
         </div>
       </a>
@@ -341,20 +344,21 @@
   });
 </script>
 <script type="text/javascript">
-  // Preload images
-  const imagePaths = [
-    "/images/userfiles/images/home/homeSlider2024/TDC%20conference%20OC%20banner.jpg",
-  ];
+  // Preload images (no active image panes; add data-lazy URLs here if you uncomment an <img> pane)
+  const imagePaths = [];
 
   imagePaths.forEach((src) => {
     const img = new Image();
     img.src = src;
   });
 
-  // Preload videos
+  // Preload videos (same order as active slides in markup)
   const videoPaths = [
-    "/images/userfiles/images/home/homeSlider2024/2026-CW-1350x540.mp4",
     "/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio.mp4",
+    "/images/userfiles/images/home/homeSlider2024/2026-CW-1350x540.mp4",
+    "/images/userfiles/images/home/homeSlider2024/OCL_generic_411_1350x540.mp4",
+    "/images/userfiles/images/home/homeSlider2024/2026OneShow_Regular-Deadline_TOC411-1350x540%20(1).mp4",
+    "/images/userfiles/images/home/homeSlider2024/ADC_411_2026.mp4",
   ];
 
   videoPaths.forEach((src) => {
