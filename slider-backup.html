@@ -130,6 +130,16 @@
     transition: 0.5s;
   }
 
+  /* Hide prev/next until slick-theme’s icon font is ready (avoids empty/wrong arrows) */
+  .sliderContainer:not(.slick-fonts-ready) .slick-arrow {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sliderContainer .slick-arrow {
+    transition: opacity 0.2s ease;
+  }
+
   /* Graceful Loading */
 
   .paneContainer {
@@ -198,7 +208,7 @@
       >
         <video autoplay muted loop playsinline id="young-ones-pane">
           <source
-            src="/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio.mp4"
+            src="/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio-small.mp4"
             type="video/mp4"
           />
         </video>
@@ -315,6 +325,28 @@
       variableWidth: true,
       lazyLoad: "progressive",
     });
+
+    var $sliderRoot = $(".sliderContainer");
+    function showSlickArrowsAfterSlickFont() {
+      $sliderRoot.addClass("slick-fonts-ready");
+    }
+    if (document.fonts && document.fonts.load) {
+      var slickFontFallbackTimer = setTimeout(showSlickArrowsAfterSlickFont, 3000);
+      document.fonts
+        .load("40px \"slick\"")
+        .then(
+          function () {
+            clearTimeout(slickFontFallbackTimer);
+            showSlickArrowsAfterSlickFont();
+          },
+          function () {
+            clearTimeout(slickFontFallbackTimer);
+            showSlickArrowsAfterSlickFont();
+          }
+        );
+    } else {
+      showSlickArrowsAfterSlickFont();
+    }
 
     // Go to the next slide after 0.5 seconds
     setTimeout(function () {
