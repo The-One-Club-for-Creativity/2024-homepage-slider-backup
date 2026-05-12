@@ -201,14 +201,14 @@
     </div>-->
 
     <!-- VIDEO PANE -->
-    <div class="paneContainer">
+    <!-- <div class="paneContainer">
       <a
         class="paneContainerLink"
-        href="https://creativeweek.com/tickets/#young-ones-tickets"
+        href="https://creativeweek.com/young-ones-student-awards/#ceremony-video"
       >
         <video autoplay muted loop playsinline id="young-ones-pane">
           <source
-            src="/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio.mp4"
+            src="/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio-small.mp4"
             type="video/mp4"
           />
         </video>
@@ -216,8 +216,26 @@
           <h3 class="videoLinkText">YOUNG ONES CEREMONY – May 11</h3>
           <a
             class="videoLink"
-            href="https://creativeweek.com/tickets/#young-ones-tickets"
-            >GET TICKETS</a
+            href="https://creativeweek.com/young-ones-student-awards/#ceremony-video"
+            >WATCH LIVE</a
+          >
+        </div>
+      </a>
+    </div> -->
+
+    <!-- VIDEO PANE -->
+    <div class="paneContainer">
+      <a class="paneContainerLink" href="https://onecreatorlab.org/apply/">
+        <video autoplay muted loop playsinline id="ocl-pane">
+          <source
+            src="/images/userfiles/images/home/homeSlider2024/OCL_generic_411_1350x540.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="videoLinkContainer">
+          <h3 class="videoLinkText">FALL 2026 APPLICATIONS ARE NOW OPEN</h3>
+          <a class="videoLink" href="https://onecreatorlab.org/apply/"
+            >APPLY NOW</a
           >
         </div>
       </a>
@@ -243,24 +261,6 @@
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
-      <a class="paneContainerLink" href="https://onecreatorlab.org/apply/">
-        <video autoplay muted loop playsinline id="ocl-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/OCL_generic_411_1350x540.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">FALL 2026 APPLICATIONS ARE NOW OPEN</h3>
-          <a class="videoLink" href="https://onecreatorlab.org/apply/"
-            >APPLY NOW</a
-          >
-        </div>
-      </a>
-    </div>
-
-    <!-- VIDEO PANE -->
-    <div class="paneContainer">
       <a
         class="paneContainerLink"
         href="https://creativeweek.com/tickets/#the-one-show-tickets"
@@ -273,9 +273,7 @@
         </video>
         <div class="videoLinkContainer">
           <h3 class="videoLinkText">Finalists Announced</h3>
-          <a
-            class="videoLink"
-            href="https://oneshow.org/finalists/"
+          <a class="videoLink" href="https://oneshow.org/finalists/"
             >SEE THE LIST</a
           >
         </div>
@@ -333,19 +331,20 @@
       $sliderRoot.addClass("slick-fonts-ready");
     }
     if (document.fonts && document.fonts.load) {
-      var slickFontFallbackTimer = setTimeout(showSlickArrowsAfterSlickFont, 3000);
-      document.fonts
-        .load("40px \"slick\"")
-        .then(
-          function () {
-            clearTimeout(slickFontFallbackTimer);
-            showSlickArrowsAfterSlickFont();
-          },
-          function () {
-            clearTimeout(slickFontFallbackTimer);
-            showSlickArrowsAfterSlickFont();
-          }
-        );
+      var slickFontFallbackTimer = setTimeout(
+        showSlickArrowsAfterSlickFont,
+        3000,
+      );
+      document.fonts.load('40px "slick"').then(
+        function () {
+          clearTimeout(slickFontFallbackTimer);
+          showSlickArrowsAfterSlickFont();
+        },
+        function () {
+          clearTimeout(slickFontFallbackTimer);
+          showSlickArrowsAfterSlickFont();
+        },
+      );
     } else {
       showSlickArrowsAfterSlickFont();
     }

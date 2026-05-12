@@ -201,10 +201,10 @@
     </div>-->
 
     <!-- VIDEO PANE -->
-    <div class="paneContainer">
+    <!-- <div class="paneContainer">
       <a
         class="paneContainerLink"
-        href="https://creativeweek.com/tickets/#young-ones-tickets"
+        href="https://creativeweek.com/young-ones-student-awards/#ceremony-video"
       >
         <video autoplay muted loop playsinline id="young-ones-pane">
           <source
@@ -216,30 +216,12 @@
           <h3 class="videoLinkText">YOUNG ONES CEREMONY – May 11</h3>
           <a
             class="videoLink"
-            href="https://creativeweek.com/tickets/#young-ones-tickets"
-            >GET TICKETS</a
+            href="https://creativeweek.com/young-ones-student-awards/#ceremony-video"
+            >WATCH LIVE</a
           >
         </div>
       </a>
-    </div>
-
-    <!-- VIDEO PANE -->
-    <div class="paneContainer">
-      <a class="paneContainerLink" href="https://creativeweek.com/">
-        <video autoplay muted loop playsinline id="cw-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/2026-CW-1350x540.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="videoLinkContainer">
-          <!-- <h3 class="videoLinkText">
-            CREATIVE WEEK IS COMING
-          </h3> -->
-          <a class="videoLink" href="https://creativeweek.com/">GET TICKETS</a>
-        </div>
-      </a>
-    </div>
+    </div> -->
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
@@ -261,20 +243,38 @@
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
+      <a class="paneContainerLink" href="https://creativeweek.com/">
+        <video autoplay muted loop playsinline id="cw-pane">
+          <source
+            src="/images/userfiles/images/home/homeSlider2024/2026-CW-1350x540.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="videoLinkContainer">
+          <h3 class="videoLinkText">CREATIVE WEEK IS HERE!</h3>
+          <a class="videoLink" href="https://creativeweek.com/">GET TICKETS</a>
+        </div>
+      </a>
+    </div>
+
+    <!-- VIDEO PANE -->
+    <div class="paneContainer">
       <a
         class="paneContainerLink"
         href="https://creativeweek.com/tickets/#the-one-show-tickets"
       >
-        <video autoplay muted loop playsinline id="adc-pane">
+        <video autoplay muted loop playsinline id="one-show-pane">
           <source
             src="/images/userfiles/images/home/homeSlider2024/2026OneShow_Regular-Deadline_TOC411-1350x540%20(1).mp4"
             type="video/mp4"
           />
         </video>
         <div class="videoLinkContainer">
-          <h3 class="videoLinkText">Finalists Announced</h3>
-          <a class="videoLink" href="https://oneshow.org/finalists/"
-            >SEE THE LIST</a
+          <h3 class="videoLinkText">THE ONE SHOW - MAY 15</h3>
+          <a
+            class="videoLink"
+            href="https://creativeweek.com/tickets/#the-one-show-tickets"
+            >GET TICKETS</a
           >
         </div>
       </a>
@@ -331,19 +331,20 @@
       $sliderRoot.addClass("slick-fonts-ready");
     }
     if (document.fonts && document.fonts.load) {
-      var slickFontFallbackTimer = setTimeout(showSlickArrowsAfterSlickFont, 3000);
-      document.fonts
-        .load("40px \"slick\"")
-        .then(
-          function () {
-            clearTimeout(slickFontFallbackTimer);
-            showSlickArrowsAfterSlickFont();
-          },
-          function () {
-            clearTimeout(slickFontFallbackTimer);
-            showSlickArrowsAfterSlickFont();
-          }
-        );
+      var slickFontFallbackTimer = setTimeout(
+        showSlickArrowsAfterSlickFont,
+        3000,
+      );
+      document.fonts.load('40px "slick"').then(
+        function () {
+          clearTimeout(slickFontFallbackTimer);
+          showSlickArrowsAfterSlickFont();
+        },
+        function () {
+          clearTimeout(slickFontFallbackTimer);
+          showSlickArrowsAfterSlickFont();
+        },
+      );
     } else {
       showSlickArrowsAfterSlickFont();
     }
