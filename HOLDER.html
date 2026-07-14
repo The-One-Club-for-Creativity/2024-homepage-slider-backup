@@ -10,13 +10,10 @@
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    height: 100%;
-    max-height: 540px;
     max-width: 1351.69px;
   }
 
   .paneContainer {
-    height: 100%;
     position: relative;
 
     /* Gap between slides */
@@ -25,22 +22,39 @@
 
   .paneContainerLink {
     cursor: pointer;
+    display: block;
   }
 
-  .slick-slide video,
-  .slick-slide img {
+  /* Explicit box + compositing layer — Safari needs this inside Slick's transformed track */
+  .paneMedia {
     display: block;
-    height: 100%;
+    width: 1350px;
+    max-width: 100%;
+    aspect-ratio: 1350 / 540;
     max-height: 540px;
+    position: relative;
+    overflow: hidden;
+  }
 
-    /* Fade images in - Could be removed */
-    transition: 0.5s;
+  .paneMedia video,
+  .paneMedia img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: none;
+  }
+
+  .slick-slide .paneMedia img {
+    transition: opacity 0.5s;
     opacity: 75%;
   }
 
-  .slick-center video,
-  .slick-center img {
-    height: 100%;
+  .slick-center .paneMedia img {
     opacity: 100%;
   }
 
@@ -50,18 +64,26 @@
     position: absolute;
     bottom: 20px;
     text-align: left;
+    z-index: 2;
+    pointer-events: none;
 
     /* Main positioning of link button */
     /* left: 20%; */
 
     /* To hide the buttons until they aren't centered */
-    opacity: 0%;
-    transition: 0.5s;
+    visibility: hidden;
+    opacity: 1;
+    transition: visibility 0.5s;
+  }
+
+  .videoLinkContainer .videoLink {
+    pointer-events: auto;
   }
 
   /* Show links when on center slide */
   .slick-center .videoLinkContainer {
-    opacity: 100%;
+    visibility: visible;
+    opacity: 1;
   }
 
   .videoLink {
@@ -140,18 +162,11 @@
     transition: opacity 0.2s ease;
   }
 
-  /* Graceful Loading */
-
-  .paneContainer {
-    opacity: 0;
-  }
-
   /* ----- MEDIA QUERIES ----- */
 
   /* After left menu disappears */
   @media screen and (max-width: 991px) {
-    .sliderContainer video,
-    .sliderContainer img {
+    .paneMedia {
       width: 95vw;
     }
     .videoLinkText {
@@ -179,128 +194,125 @@
 
 <div class="sliderContainer">
   <div class="slider">
-    <!-- IMAGE PANE -->
-    <!--  <div class="paneContainer">
-      <a
-        class="paneContainerLink"
-        href="https://www.oneclub.org/awards/rankings/-archive/agency/2025/all/all/all/all"
-      >
-        <img
-          id="global-rankings-pane"
-          data-lazy="/images/userfiles/images/home/homeSlider2024/GCR-411-1350x540.jpg"
-        />
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">2025 Global Rankings Announced</h3>
-          <a
-            class="videoLink"
-            href="https://www.oneclub.org/awards/rankings/-archive/agency/2025/all/all/all/all"
-            >VIEW RANKINGS</a
-          >
-        </div>
-      </a>
-    </div>-->
-
-    <!-- VIDEO PANE -->
-    <!-- <div class="paneContainer">
-      <a
-        class="paneContainerLink"
-        href="https://creativeweek.com/young-ones-student-awards/#ceremony-video"
-      >
-        <video autoplay muted loop playsinline id="young-ones-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/YO%20-%20411%20-%201350%E2%80%8A%C3%97%E2%80%8A540noaudio-small.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">YOUNG ONES CEREMONY – May 11</h3>
-          <a
-            class="videoLink"
-            href="https://creativeweek.com/young-ones-student-awards/#ceremony-video"
-            >WATCH LIVE</a
-          >
-        </div>
-      </a>
-    </div> -->
-
     <!-- VIDEO PANE -->
     <div class="paneContainer">
-      <a class="paneContainerLink" href="https://onecreatorlab.org/apply/">
-        <video autoplay muted loop playsinline id="ocl-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/OCL_generic_411_1350x540.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">FALL 2026 APPLICATIONS ARE NOW OPEN</h3>
-          <a class="videoLink" href="https://onecreatorlab.org/apply/"
-            >APPLY NOW</a
-          >
+      <a class="paneContainerLink" href="https://oneasiaawards.org/">
+        <div class="paneMedia">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            width="1350"
+            height="540"
+            id="oneasia-pane"
+            src="/images/userfiles/images/home/homeSlider2024/ONE%20Asia%20Home%20page%20video.mp4"
+          ></video>
         </div>
       </a>
+      <div class="videoLinkContainer">
+        <h3 class="videoLinkText">ONE ASIA - NOW OPEN FOR ENTRIES</h3>
+        <a class="videoLink" href="https://oneasiaawards.org/">ENTER NOW</a>
+      </div>
     </div>
 
-    <!-- VIDEO PANE -->
+    <!--         IMAGE PANE-->
     <div class="paneContainer">
-      <a class="paneContainerLink" href="https://creativeweek.com/">
-        <video autoplay muted loop playsinline id="cw-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/2026-CW-1350x540.mp4"
-            type="video/mp4"
+      <a class="paneContainerLink" href="https://brandside.org/">
+        <div class="paneMedia">
+          <img
+            id="brandside-pane"
+            width="1350"
+            height="540"
+            data-lazy="/images/userfiles/images/home/homeSlider2024/2026-BrandSide-1350x540.webp"
           />
-        </video>
-        <div class="videoLinkContainer">
-          <!-- <h3 class="videoLinkText">
-            CREATIVE WEEK IS COMING
-          </h3> -->
-          <a class="videoLink" href="https://creativeweek.com/">GET TICKETS</a>
         </div>
       </a>
+      <div class="videoLinkContainer">
+        <h3 class="videoLinkText">BRAND-SIDE: Early Bird Rates End June 30</h3>
+        <a class="videoLink" href="https://brandside.org/">REGISTER NOW</a>
+      </div>
     </div>
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
       <a
         class="paneContainerLink"
-        href="https://creativeweek.com/tickets/#the-one-show-tickets"
+        href="https://creativehalloffame.org/2026-inductees/"
       >
-        <video autoplay muted loop playsinline id="adc-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/2026OneShow_Regular-Deadline_TOC411-1350x540%20(1).mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">Finalists Announced</h3>
-          <a class="videoLink" href="https://oneshow.org/finalists/"
-            >SEE THE LIST</a
-          >
+        <div class="paneMedia">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            width="1350"
+            height="540"
+            id="chof-pane"
+            src="/images/userfiles/images/home/homeSlider2024/CHOF2026-Inductees_Announced-TOCC411-1350x540.mp4"
+          ></video>
         </div>
       </a>
+      <div class="videoLinkContainer">
+        <h3 class="videoLinkText">MEET THE INDUCTEES</h3>
+        <a
+          class="videoLink"
+          href="https://creativehalloffame.org/2026-inductees/"
+          >LEARN MORE</a
+        >
+      </div>
     </div>
 
     <!-- VIDEO PANE -->
     <div class="paneContainer">
       <a
         class="paneContainerLink"
-        href="https://creativeweek.com/tickets/#adc-tickets"
+        href="https://www.oneclub.org/store/-2026-tdc-exhibition-opening"
       >
-        <video autoplay muted loop playsinline id="adc-pane">
-          <source
-            src="/images/userfiles/images/home/homeSlider2024/ADC_411_2026.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="videoLinkContainer">
-          <h3 class="videoLinkText">ADC 105th CEREMONY – May 13</h3>
-          <a
-            class="videoLink"
-            href="https://creativeweek.com/tickets/#adc-tickets"
-            >GET TICKETS</a
-          >
+        <div class="paneMedia">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            width="1350"
+            height="540"
+            id="tdc-pane"
+            src="/images/userfiles/images/home/homeSlider2024/1350x540_TDC_exhibiton_2026_OneClubHomepage.mp4"
+          ></video>
         </div>
       </a>
+      <div class="videoLinkContainer">
+        <h3 class="videoLinkText">TDC72 Awards Ceremony - JULY 16</h3>
+        <a
+          class="videoLink"
+          href="https://www.oneclub.org/store/-2026-tdc-exhibition-opening"
+          >GET TICKETS</a
+        >
+      </div>
+    </div>
+
+    <!--         IMAGE PANE-->
+    <div class="paneContainer">
+      <a class="paneContainerLink" href="https://getoutthevote.oneclub.org/">
+        <div class="paneMedia">
+          <img
+            id="global-rankings-pane"
+            width="1350"
+            height="540"
+            data-lazy="/images/userfiles/images/home/homeSlider2024/2026-GetOutTheVote-1350x540.webp"
+          />
+        </div>
+      </a>
+      <div class="videoLinkContainer">
+        <h3 class="videoLinkText">Enter Now - Deadline August 31</h3>
+        <a class="videoLink" href="https://getoutthevote.oneclub.org/"
+          >ENTER NOW</a
+        >
+      </div>
     </div>
 
     <!-- END -->
@@ -310,6 +322,40 @@
 <script type="text/javascript" src="/scripts/css/slick/slick.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
+    function playVideo(video) {
+      video.muted = true;
+      if (video.readyState === 0) {
+        video.load();
+      }
+      var playAttempt = video.play();
+      if (playAttempt && playAttempt.catch) {
+        playAttempt.catch(function () {});
+      }
+    }
+
+    function manageSliderVideos() {
+      $(".slider .slick-slide video").each(function () {
+        var video = this;
+        var isCenter = $(video)
+          .closest(".slick-slide")
+          .hasClass("slick-center");
+
+        if (isCenter) {
+          playVideo(video);
+        } else {
+          video.pause();
+        }
+      });
+    }
+
+    $(".slider").on("init afterChange", manageSliderVideos);
+    $(".slider").on("loadedmetadata", "video", function () {
+      if ($(this).closest(".slick-slide").hasClass("slick-center")) {
+        playVideo(this);
+      }
+    });
+    $(window).on("pageshow", manageSliderVideos);
+
     $(".slider").slick({
       centerMode: true,
       centerPadding: "80px",
@@ -324,6 +370,7 @@
       adaptiveHeight: false,
       variableWidth: true,
       lazyLoad: "progressive",
+      useTransform: false,
     });
 
     var $sliderRoot = $(".sliderContainer");
@@ -354,15 +401,6 @@
       $(".slider").slick("slickNext");
     }, 1);
 
-    setTimeout(function () {
-      $(".paneContainer").animate(
-        {
-          opacity: 1,
-        },
-        1000,
-      ); // Fades to opacity 1 over 1000 milliseconds (1 second)
-    }, 1000); // Waits 1 second before starting the animation
-
     // Dynamically control the left position of the Link Container so it's always in the bottom left corner
     function updateLinkContainerPosition() {
       var paneContainerHalfWidth = $(".paneContainer").first().outerWidth() / 2;
@@ -374,6 +412,10 @@
     updateLinkContainerPosition();
     $(window).resize(updateLinkContainerPosition);
     $(".slider").on("setPosition", updateLinkContainerPosition);
+    $(".slider").on("afterChange", function () {
+      $(".slider").slick("setPosition");
+    });
+    $(".slider").slick("setPosition");
   });
 </script>
 <script type="text/javascript">
