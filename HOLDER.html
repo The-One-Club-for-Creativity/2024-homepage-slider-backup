@@ -217,6 +217,54 @@
       </div>
     </div>
 
+    <!-- VIDEO PANE -->
+    <div class="paneContainer">
+      <a class="paneContainerLink" href="https://portfolionight.com/">
+        <div class="paneMedia">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            width="1350"
+            height="540"
+            id="pn26-pane"
+            src="/images/userfiles/images/home/homeSlider2024/1350%C3%97540-411Banner.mp4"
+          ></video>
+        </div>
+      </a>
+      <div class="videoLinkContainer">
+        <h3 class="videoLinkText">Get Tickets - October 2026</h3>
+        <a class="videoLink" href="https://portfolionight.com/">GET TICKETS</a>
+      </div>
+    </div>
+
+    <!--         IMAGE PANE-->
+    <div class="paneContainer">
+      <a
+        class="paneContainerLink"
+        href="https://www.oneclub.org/articles/-view/2026-top-ten-advertising-and-design-schools/"
+      >
+        <div class="paneMedia">
+          <img
+            id="top-schools"
+            width="1350"
+            height="540"
+            data-lazy="/images/userfiles/images/home/homeSlider2024/top10schools-2026-411.webp"
+          />
+        </div>
+      </a>
+      <div class="videoLinkContainer">
+        <h3 class="videoLinkText">TOP 10 AD SCHOOLS FOR 2026</h3>
+        <a
+          class="videoLink"
+          href="https://www.oneclub.org/articles/-view/2026-top-ten-advertising-and-design-schools/"
+          >READ MORE
+        </a>
+      </div>
+    </div>
+
     <!--         IMAGE PANE-->
     <div class="paneContainer">
       <a class="paneContainerLink" href="https://youngguns.org/">
@@ -230,7 +278,9 @@
         </div>
       </a>
       <div class="videoLinkContainer">
-        <h3 class="videoLinkText">YOUNG GUNS: Regular Deadline – August 27</h3>
+        <h3 class="videoLinkText">
+          ADC YOUNG GUNS: FINAL DEADLINE – SEPTEMBER 24th
+        </h3>
         <a class="videoLink" href="https://youngguns.org/">ENTER NOW</a>
       </div>
     </div>
@@ -368,7 +418,7 @@
     if (document.fonts && document.fonts.load) {
       var slickFontFallbackTimer = setTimeout(
         showSlickArrowsAfterSlickFont,
-        3000,
+        3000
       );
       document.fonts.load('40px "slick"').then(
         function () {
@@ -378,7 +428,7 @@
         function () {
           clearTimeout(slickFontFallbackTimer);
           showSlickArrowsAfterSlickFont();
-        },
+        }
       );
     } else {
       showSlickArrowsAfterSlickFont();
